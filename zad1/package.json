@@ -6,7 +6,7 @@
     "start": "webpack"
   },
   "devDependencies": {
-    "webpack": "^4.0.1"
+    "webpack": "^3.0.0"
   },
   "main": "webpack.config.js",
   "dependencies": {},
