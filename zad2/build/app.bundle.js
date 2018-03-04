@@ -945,8 +945,8 @@ module.exports = focusNode;
 "use strict";
 
 
-var v1 = __webpack_require__(31);
-var v4 = __webpack_require__(32);
+var v1 = __webpack_require__(30);
+var v4 = __webpack_require__(31);
 
 var uuid = v4;
 uuid.v1 = v1;
@@ -1032,19 +1032,18 @@ var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(30);
-
-var _App2 = _interopRequireDefault(_App);
-
 var _uuid = __webpack_require__(14);
 
 var _uuid2 = _interopRequireDefault(_uuid);
 
+var _Title = __webpack_require__(32);
+
+var _Title2 = _interopRequireDefault(_Title);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import Title from './components/Title';
-
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
+//import App from './containers/App';
+_reactDom2.default.render(_react2.default.createElement(_Title2.default, null), document.getElementById('app'));
 
 /***/ }),
 /* 18 */
@@ -7798,89 +7797,6 @@ module.exports = camelize;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _uuid = __webpack_require__(14);
-
-var _uuid2 = _interopRequireDefault(_uuid);
-
-var _App = __webpack_require__(33);
-
-var _App2 = _interopRequireDefault(_App);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_React$Component) {
-    _inherits(App, _React$Component);
-
-    function App(props) {
-        _classCallCheck(this, App);
-
-        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-        _this.state = {
-            data: []
-        };
-        return _this;
-    }
-
-    _createClass(App, [{
-        key: 'addTodo',
-        value: function addTodo(val) {
-            var todo = {
-                text: val,
-                id: _uuid2.default.v4()
-            };
-            var data = [].concat(_toConsumableArray(this.state.data), [todo]);
-            this.setState({ data: data });
-        }
-    }, {
-        key: 'removeTodo',
-        value: function removeTodo(id) {
-            var remainder = this.state.data.filter(function (todo) {
-                return todo.id !== id;
-            });
-            this.setState({ data: remainder });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: _App2.default.TodoApp },
-                'Tutaj pojawi\u0105 si\u0119 komponenty naszej aplikacji.'
-            );
-        }
-    }]);
-
-    return App;
-}(_react2.default.Component);
-
-exports.default = App;
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var rng = __webpack_require__(15);
 var bytesToUuid = __webpack_require__(16);
 
@@ -7989,7 +7905,7 @@ function v1(options, buf, offset) {
 module.exports = v1;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8026,6 +7942,41 @@ function v4(options, buf, offset) {
 module.exports = v4;
 
 /***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _uuid = __webpack_require__(14);
+
+var _uuid2 = _interopRequireDefault(_uuid);
+
+var _Title = __webpack_require__(33);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Title = function Title(props) {
+  return _react2.default.createElement(
+    'h1',
+    null,
+    props.title
+  );
+};
+
+exports.default = Title;
+
+/***/ }),
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8049,8 +8000,8 @@ var update = __webpack_require__(36)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./App.css", function() {
-		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./App.css");
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./Title.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./Title.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -8084,11 +8035,11 @@ exports = module.exports = __webpack_require__(35)(false);
 
 
 // module
-exports.push([module.i, "._2xo2biYT1s9XQmHhT2Utv5 {\n    background-color: rgb(165, 154, 154);\n    color: #222;\n    display: flex;\n    flex-direction: column;\n    flex-wrap: nowrap;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n    width: 100vw;\n    height: 100vh;\n}", ""]);
+exports.push([module.i, "._2rVA021Jvio2QiUgklweHL {\n    background-color: rgb(84, 169, 179);\n    color: white;\n    font-size: 50px;\n}", ""]);
 
 // exports
 exports.locals = {
-	"TodoApp": "_2xo2biYT1s9XQmHhT2Utv5"
+	"Tile": "_2rVA021Jvio2QiUgklweHL"
 };
 
 /***/ }),
