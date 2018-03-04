@@ -5,6 +5,6 @@ import uuid from 'uuid';
 import Title from './components/Title';
 
 ReactDOM.render(
-    <Title />,
+    <Title/>,
     document.getElementById('app')
 );

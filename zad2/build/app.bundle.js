@@ -7970,7 +7970,7 @@ var Title = function Title(props) {
   return _react2.default.createElement(
     'h1',
     null,
-    props.title
+    'Hello this is my title'
   );
 };
 
@@ -8035,12 +8035,10 @@ exports = module.exports = __webpack_require__(35)(false);
 
 
 // module
-exports.push([module.i, "._2rVA021Jvio2QiUgklweHL {\n    background-color: rgb(84, 169, 179);\n    color: white;\n    font-size: 50px;\n}", ""]);
+exports.push([module.i, "h1 {\n    background-color: rgb(84, 169, 179);\n    color: white;\n    font-size: 50px;\n    text-align: center;\n}", ""]);
 
 // exports
-exports.locals = {
-	"Tile": "_2rVA021Jvio2QiUgklweHL"
-};
+
 
 /***/ }),
 /* 35 */
