@@ -1,5 +1,5 @@
 .TodoApp {
-    background-color: rgb(165, 154, 154);
+    background-color: rgb(41, 124, 172);
     color: #222;
     display: flex;
     flex-direction: column;
@@ -12,4 +12,14 @@
 }
 h1 {
     font-family: 'Shadows Into Light', cursive;
+}
+
+li {
+    margin: 10px;
+    color: white;
+    text-transform: uppercase;
+    width: 400px;
+}
+button {
+    margin-left: 10px;
 }

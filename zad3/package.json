@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "uuid": "^3.2.1",
-    "webpack": "^3.0.0"
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -17,11 +16,14 @@
     "optimize-js-plugin": "0.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "style-loader": "^0.20.2"
+    "react-hot-loader": "^4.0.0",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "build": "NODE_ENV=production webpack",
+    "start": "webpack-dev-server --inline --hot --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "",
